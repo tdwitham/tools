@@ -1,0 +1,16 @@
+# .bashrc
+# (c) 2017 - Timothy D. Witham tim.wookie.witham@gmail.com
+# Licensed under BSD 2-Clause
+# get the global definitions
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+# User specific aliases and functions
+set -o vi
+if (( $EUID == root)) ; then 
+  PCHAR="#"
+else
+  PCHAR=">"
+fi
+export PS1='$(date +%H:%M)@$(hostname -s)${PCHAR} '
+alias ls="ls -FC --color=auto"
