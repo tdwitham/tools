@@ -11,6 +11,7 @@ if (( $EUID == root)) ; then
   PCHAR="#"
 else
   PCHAR=">"
+  export PATH=$PATH:~/bin
 fi
 export PS1='$(date +%H:%M)@$(hostname -s)${PCHAR} '
 alias ls="ls -FC --color=auto"
