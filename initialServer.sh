@@ -6,10 +6,9 @@
 `dirname $01/setRH.sh`
 yum -y update
 yum -y install epel-release
-yum -y --enablerepo=epel groups install "MATE Desktop"
-yum -y --enablerepo=epel groups install "Xfce Desktop"
+yum -y --enablerepo=epel group install "MATE Desktop"
+yum -y --enablerepo=epel group install "Xfce Desktop"
 yum -y --enablerepo=epel install cinnamon*
 yum -y --enablerepo=epel install xrdp
 yum -y install "KDE Plasma Workspaces"
-yum -y install tigervnc-dirname $01*
-yum -y install
+yum -y install tigervnc-*
