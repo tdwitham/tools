@@ -12,3 +12,7 @@ yum -y --enablerepo=epel install cinnamon*
 yum -y --enablerepo=epel install xrdp
 yum -y install "KDE Plasma Workspaces"
 yum -y install tigervnc-*
+
+echo "Disable SELinux"
+sed -in-place=orig 's/SELINUX=\(.*\)/SELINUX=disabled/' /etc/selinux/config
+setenforce 0
