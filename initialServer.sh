@@ -3,7 +3,7 @@
 #
 # (c) 2017 - Timothy D. Witham tim.wookie.witham@gmail.com
 # Licensed under BSD 2-Clause
-`dirname $01/setRH.sh`
+source `dirname ${0}`/setRH.sh
 yum -y update
 yum -y install epel-release
 yum -y --enablerepo=epel group install "MATE Desktop"
